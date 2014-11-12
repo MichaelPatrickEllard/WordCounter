@@ -46,3 +46,8 @@ Naive Swift Implementation
 This adds a "Naive" Swift version of the file parser class: FileParserSwift. The intent of this code is to as closely as possible replicate the code from FileParseObjC. It also adds SwiftCountedSet, a Swift alternative to NSCountedSet.
 
 This naive conversion results in Swift code that does everything that the Objective-C code does, but which is much slower than the Objective-C original.
+
+Step 1
+--------
+
+This changes debugging optimization from -ONone to -O.  -O is better for performance testing.  Use -ONone for other debugging. 
