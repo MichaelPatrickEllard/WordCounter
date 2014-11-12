@@ -40,3 +40,9 @@ This is a version of the project with only Objective-C code.
 
 This project was originally used to demonstrate the value of autorelease pools.  As such, it intentionally creates a large number of temporary objects.  
 
+Naive Swift Implementation
+--------
+
+This adds a "Naive" Swift version of the file parser class: FileParserSwift. The intent of this code is to as closely as possible replicate the code from FileParseObjC. It also adds SwiftCountedSet, a Swift alternative to NSCountedSet.
+
+This naive conversion results in Swift code that does everything that the Objective-C code does, but which is much slower than the Objective-C original.

@@ -10,6 +10,8 @@
 
 #import "FileParserObjC.h"
 
+#import "WordCounter-Swift.h"
+
 @implementation ViewController
 
 - (IBAction)runObjCParser:(id)sender {
@@ -20,5 +22,12 @@
     
 }
 
+- (IBAction)runSwiftParser:(id)sender {
+    
+     FileParserSwift *swiftParser = [FileParserSwift new];
+    
+    [swiftParser analyzeFiles];
+    
+}
 
 @end

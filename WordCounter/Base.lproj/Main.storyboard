@@ -25,11 +25,22 @@
                                     <action selector="runObjCParser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nfQ-rr-Zi9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpb-kU-zFP">
+                                <rect key="frame" x="243" y="231" width="115" height="30"/>
+                                <state key="normal" title="Run Swift Parser">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="runSwiftParser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z4L-UZ-bJr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Wpb-kU-zFP" secondAttribute="centerX" id="Vlq-Ka-L0V"/>
                             <constraint firstAttribute="centerX" secondItem="6E4-Ue-hp9" secondAttribute="centerX" id="eqG-18-pDA"/>
                             <constraint firstAttribute="centerY" secondItem="6E4-Ue-hp9" secondAttribute="centerY" id="u3j-u8-3T6"/>
+                            <constraint firstItem="6E4-Ue-hp9" firstAttribute="top" secondItem="Wpb-kU-zFP" secondAttribute="bottom" constant="24" id="wTs-qm-dcF"/>
                         </constraints>
                     </view>
                 </viewController>

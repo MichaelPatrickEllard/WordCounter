@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3ABEF0A1A1331DE00AECB11 /* FileParserSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ABEF081A1331DE00AECB11 /* FileParserSwift.swift */; };
+		E3ABEF0B1A1331DE00AECB11 /* SwiftCountedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ABEF091A1331DE00AECB11 /* SwiftCountedSet.swift */; };
+		E3ABEF121A13351400AECB11 /* WordCounterTestsSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ABEF111A13351400AECB11 /* WordCounterTestsSwift.swift */; };
+		E3ABEF141A13394B00AECB11 /* SwiftCountedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ABEF091A1331DE00AECB11 /* SwiftCountedSet.swift */; };
+		E3ABEF151A13394F00AECB11 /* FileParserSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ABEF081A1331DE00AECB11 /* FileParserSwift.swift */; };
 		E3C165261A12AF1900B3A38F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C165251A12AF1900B3A38F /* main.m */; };
 		E3C165291A12AF1900B3A38F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C165281A12AF1900B3A38F /* AppDelegate.m */; };
 		E3C1652C1A12AF1900B3A38F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C1652B1A12AF1900B3A38F /* ViewController.m */; };
@@ -29,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E3ABEF051A1331AC00AECB11 /* WordCounter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "WordCounter-Bridging-Header.h"; path = "../WordCounter-Bridging-Header.h"; sourceTree = "<group>"; };
+		E3ABEF081A1331DE00AECB11 /* FileParserSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileParserSwift.swift; sourceTree = "<group>"; };
+		E3ABEF091A1331DE00AECB11 /* SwiftCountedSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftCountedSet.swift; sourceTree = "<group>"; };
+		E3ABEF111A13351400AECB11 /* WordCounterTestsSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCounterTestsSwift.swift; sourceTree = "<group>"; };
 		E3C165201A12AF1900B3A38F /* WordCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C165241A12AF1900B3A38F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3C165251A12AF1900B3A38F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +100,8 @@
 			children = (
 				E3D740AB1A12DF7C0023CC23 /* FileParserObjC.h */,
 				E3D740AC1A12DF7C0023CC23 /* FileParserObjC.m */,
+				E3ABEF081A1331DE00AECB11 /* FileParserSwift.swift */,
+				E3ABEF091A1331DE00AECB11 /* SwiftCountedSet.swift */,
 				E3C165271A12AF1900B3A38F /* AppDelegate.h */,
 				E3C165281A12AF1900B3A38F /* AppDelegate.m */,
 				E3C1652A1A12AF1900B3A38F /* ViewController.h */,
@@ -116,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				E3C1653F1A12AF1900B3A38F /* WordCounterTestsObjC.m */,
+				E3ABEF111A13351400AECB11 /* WordCounterTestsSwift.swift */,
 				E3C1653D1A12AF1900B3A38F /* Supporting Files */,
 			);
 			path = WordCounterTests;
@@ -124,6 +136,7 @@
 		E3C1653D1A12AF1900B3A38F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E3ABEF051A1331AC00AECB11 /* WordCounter-Bridging-Header.h */,
 				E3C1653E1A12AF1900B3A38F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -232,8 +245,10 @@
 			files = (
 				E3C1652C1A12AF1900B3A38F /* ViewController.m in Sources */,
 				E3C165291A12AF1900B3A38F /* AppDelegate.m in Sources */,
+				E3ABEF0A1A1331DE00AECB11 /* FileParserSwift.swift in Sources */,
 				E3D740AD1A12DF7C0023CC23 /* FileParserObjC.m in Sources */,
 				E3C165261A12AF1900B3A38F /* main.m in Sources */,
+				E3ABEF0B1A1331DE00AECB11 /* SwiftCountedSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +256,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3ABEF121A13351400AECB11 /* WordCounterTestsSwift.swift in Sources */,
 				E3C165401A12AF1900B3A38F /* WordCounterTestsObjC.m in Sources */,
+				E3ABEF151A13394F00AECB11 /* FileParserSwift.swift in Sources */,
+				E3ABEF141A13394B00AECB11 /* SwiftCountedSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,13 +375,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
+				DEFINES_MODULE = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = WordCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WordCounter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -371,12 +393,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
+				DEFINES_MODULE = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = WordCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WordCounter-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -384,6 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -395,6 +421,8 @@
 				INFOPLIST_FILE = WordCounterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordCounter.app/WordCounter";
 			};
 			name = Debug;
@@ -403,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -410,6 +439,7 @@
 				INFOPLIST_FILE = WordCounterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordCounter.app/WordCounter";
 			};
 			name = Release;
