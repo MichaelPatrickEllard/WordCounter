@@ -92,44 +92,30 @@
                                                           error:&fileReadError];
     
     
-    NSArray *strings = [fileContents componentsSeparatedByString:@"\n"];
+    __block NSInteger lineCount = 0;
     
-    NSLog(@"Here's how many strings %ld", (unsigned long)[strings count]);
-    
-    int loopCounter = 0;
-    
-    int fileWordCount = 0;
-    
-    for (NSString *eachLine in strings)
-    {
-        loopCounter ++;
+    [fileContents enumerateLinesUsingBlock:^(NSString *line, BOOL *stop) {
         
-        if ([eachLine length] > 19)
+        if (![line isEqualToString:@""])
         {
+            lineCount++;
+            
             @autoreleasepool
             {
-                NSString *words = [eachLine substringFromIndex:19];
+                NSRange lastSpaceRange = [line rangeOfString:@" " options:NSBackwardsSearch];
                 
-                NSArray *parsedWords = [words componentsSeparatedByString:@" "];
-                
-                NSString *dictionaryForm = [parsedWords objectAtIndex:3];
-                
-                fileWordCount++;
+                NSString *dictionaryForm = [line substringFromIndex:lastSpaceRange.location + 1];
                 
                 [self.countedSet addObject:dictionaryForm];
             }
             
         }
-        else
-        {
-            if (loopCounter != [strings count])
-            {
-                NSLog(@"Line %d is shorter than expected: '%@'", loopCounter, eachLine);
-            }
-        }
-    }
+        
+    }];
     
-    self.wordCount += fileWordCount;
+    NSLog(@"Here's how many strings %ld", (unsigned long)lineCount);
+    
+    self.wordCount += lineCount;
 }
 
 -(NSArray *)orderedArrayFromCountedSet:(NSCountedSet *)sourceSet

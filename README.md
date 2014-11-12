@@ -66,3 +66,8 @@ Step 4
 --------
 
 Removing unnecessary type conversion of an NSArray of NSStrings to a Swift Array of Swift Strings.  While conversions like this are inexpensive on an individual basis, the cumulative cost can become significant when dealing with arrays containing more than 100,000 objects.
+
+Step 5
+--------
+
+Rewriting some of the code to be more efficient. One of the goals of the original project was to create lots of temporary objects in order to demonstrate the value of autorelease pools. This version of the code discards that goal, instead focusing on making the code faster and more efficient.  

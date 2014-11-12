@@ -112,39 +112,38 @@ public class FileParserSwift: NSObject {
         
         let fileContents = NSString(contentsOfFile: filePath, encoding: 4, error: &fileReadError)
         
+        var lineCount = 0
         
-        let strings = fileContents!.componentsSeparatedByString("\n")
-        
-        NSLog("Here's how many strings \(strings.count)")
-        
-        let lastStringIndex = strings.count - 1
-        
-        for (loopCounter, eachLine) in enumerate(strings) {
+        fileContents?.enumerateLinesUsingBlock() { (currentLine : String!, stop : UnsafeMutablePointer) in
             
-            if (!eachLine.isEqualToString(""))
+            if !currentLine.isEmpty
             {
                 autoreleasepool
-                {
-                    let parsedWords = eachLine.componentsSeparatedByString(" ")
-                    
-                    let dictionaryForm: AnyObject = parsedWords[6]
-                    
-                    self.countedSet.addObject(dictionaryForm)
-                }
-            }
-            else
-            {
-                if (loopCounter != lastStringIndex) {
-                    
-                    let lineString = eachLine as String
-                    
-                    NSLog("Line %ld is shorter than expected: '%@'", loopCounter, lineString);
-                    
+                    {
+                        let currentLineObjC = currentLine as NSString
+                        
+                        var currentIndex = currentLineObjC.length - 1
+                        
+                        var space: unichar = 32
+                        
+                        while currentLineObjC.characterAtIndex(currentIndex) != space {
+                            
+                            currentIndex--
+                        }
+                        
+                        let dictionaryForm = currentLineObjC.substringFromIndex(currentIndex + 1)
+                        
+                        self.countedSet.addObject(dictionaryForm)
+                        
+                        lineCount = lineCount + 1
+                        
                 }
             }
         }
         
-        wordCount = wordCount + Int(lastStringIndex)
+        NSLog("Here's how many strings \(lineCount)")
+        
+        wordCount = wordCount + lineCount
     }
     
     func orderedArrayFromCountedSet(sourceSet: NSCountedSet) -> [String] {
