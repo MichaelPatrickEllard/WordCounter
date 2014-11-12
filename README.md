@@ -71,3 +71,8 @@ Step 5
 --------
 
 Rewriting some of the code to be more efficient. One of the goals of the original project was to create lots of temporary objects in order to demonstrate the value of autorelease pools. This version of the code discards that goal, instead focusing on making the code faster and more efficient.  
+
+Step ?: Your Name Here!
+--------
+
+Can you find a way to make the Swift code even faster and more efficient?  Please share it! I welcome your contributions to this project.
