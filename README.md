@@ -51,3 +51,8 @@ Step 1
 --------
 
 This changes debugging optimization from -ONone to -O.  -O is better for performance testing.  Use -ONone for other debugging. 
+
+Step 2
+--------
+
+Use of SwiftCountedSet is eliminated.  While it's cool to be able to implement a Swift version of NSCountedSet using generics, NSCountedSet has a lot of optimizations in it that make it a better choice.

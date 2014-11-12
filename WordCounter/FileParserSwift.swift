@@ -10,7 +10,7 @@ import UIKit
 
 public class FileParserSwift: NSObject {
     
-    var countedSet: SwiftCountedSet<String>!
+    var countedSet: NSCountedSet!
     var orderedArray: [String]!
     
     var properNameArray: [String]!
@@ -40,7 +40,7 @@ public class FileParserSwift: NSObject {
         
         NSLog("Beginning File Parser operations")
         
-        countedSet = SwiftCountedSet<String>()
+        countedSet = NSCountedSet()
         
         let fileManager = NSFileManager()
         
@@ -151,7 +151,7 @@ public class FileParserSwift: NSObject {
         wordCount = wordCount + Int(lastStringIndex)
     }
     
-    func orderedArrayFromCountedSet(sourceSet: SwiftCountedSet<String>) -> [String] {
+    func orderedArrayFromCountedSet(sourceSet: NSCountedSet) -> [String] {
     
         var words = countedSet.allObjects
         
