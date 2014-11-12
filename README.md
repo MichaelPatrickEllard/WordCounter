@@ -61,3 +61,8 @@ Step 3
 --------
 
 Elimination of an expensive test using countElements.  As per the Swift Language Guide, using countElements can be expensive when dealing with a large string.  In this case, countElements is essentially used to analyze the grapheme clusters in 9MB of String data, which is rather expensive. Use of the Swift String isEmpty property is a much more efficient way of doing the needed test.  
+
+Step 4
+--------
+
+Removing unnecessary type conversion of an NSArray of NSStrings to a Swift Array of Swift Strings.  While conversions like this are inexpensive on an individual basis, the cumulative cost can become significant when dealing with arrays containing more than 100,000 objects.

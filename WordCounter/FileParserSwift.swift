@@ -113,7 +113,7 @@ public class FileParserSwift: NSObject {
         let fileContents = NSString(contentsOfFile: filePath, encoding: 4, error: &fileReadError)
         
         
-        let strings = fileContents!.componentsSeparatedByString("\n") as [String]
+        let strings = fileContents!.componentsSeparatedByString("\n")
         
         NSLog("Here's how many strings \(strings.count)")
         
@@ -121,19 +121,13 @@ public class FileParserSwift: NSObject {
         
         for (loopCounter, eachLine) in enumerate(strings) {
             
-            if (!eachLine.isEmpty)
+            if (!eachLine.isEqualToString(""))
             {
                 autoreleasepool
                 {
-                    var wordStart = advance(eachLine.startIndex, 19)
+                    let parsedWords = eachLine.componentsSeparatedByString(" ")
                     
-                    let wordsRange = Range(start: wordStart, end: eachLine.endIndex)
-                    
-                    let words = eachLine[wordsRange]
-                    
-                    let parsedWords = words.componentsSeparatedByString(" ")
-                    
-                    let dictionaryForm = parsedWords[3]
+                    let dictionaryForm: AnyObject = parsedWords[6]
                     
                     self.countedSet.addObject(dictionaryForm)
                 }
@@ -142,7 +136,9 @@ public class FileParserSwift: NSObject {
             {
                 if (loopCounter != lastStringIndex) {
                     
-                    NSLog("Line %ld is shorter than expected: '%@'", loopCounter, eachLine);
+                    let lineString = eachLine as String
+                    
+                    NSLog("Line %ld is shorter than expected: '%@'", loopCounter, lineString);
                     
                 }
             }
