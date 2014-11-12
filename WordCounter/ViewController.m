@@ -8,20 +8,17 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
+#import "FileParserObjC.h"
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (IBAction)runObjCParser:(id)sender {
+    
+    FileParserObjC *objCParser = [FileParserObjC new];
+    
+    [objCParser analyzeFiles];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

@@ -13,7 +13,9 @@
 		E3C1652F1A12AF1900B3A38F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C1652D1A12AF1900B3A38F /* Main.storyboard */; };
 		E3C165311A12AF1900B3A38F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C165301A12AF1900B3A38F /* Images.xcassets */; };
 		E3C165341A12AF1900B3A38F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3C165321A12AF1900B3A38F /* LaunchScreen.xib */; };
-		E3C165401A12AF1900B3A38F /* WordCounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C1653F1A12AF1900B3A38F /* WordCounterTests.m */; };
+		E3C165401A12AF1900B3A38F /* WordCounterTestsObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C1653F1A12AF1900B3A38F /* WordCounterTestsObjC.m */; };
+		E3D740AA1A12DF5B0023CC23 /* WordFiles in Resources */ = {isa = PBXBuildFile; fileRef = E3D740A91A12DF5B0023CC23 /* WordFiles */; };
+		E3D740AD1A12DF7C0023CC23 /* FileParserObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D740AC1A12DF7C0023CC23 /* FileParserObjC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,11 @@
 		E3C165331A12AF1900B3A38F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E3C165391A12AF1900B3A38F /* WordCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C1653E1A12AF1900B3A38F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3C1653F1A12AF1900B3A38F /* WordCounterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordCounterTests.m; sourceTree = "<group>"; };
+		E3C1653F1A12AF1900B3A38F /* WordCounterTestsObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordCounterTestsObjC.m; sourceTree = "<group>"; };
+		E3D740A71A12DF290023CC23 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E3D740A91A12DF5B0023CC23 /* WordFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WordFiles; sourceTree = "<group>"; };
+		E3D740AB1A12DF7C0023CC23 /* FileParserObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileParserObjC.h; sourceTree = "<group>"; };
+		E3D740AC1A12DF7C0023CC23 /* FileParserObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileParserObjC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +69,9 @@
 		E3C165171A12AF1900B3A38F = {
 			isa = PBXGroup;
 			children = (
+				E3D740A71A12DF290023CC23 /* README.md */,
 				E3C165221A12AF1900B3A38F /* WordCounter */,
+				E3D740A91A12DF5B0023CC23 /* WordFiles */,
 				E3C1653C1A12AF1900B3A38F /* WordCounterTests */,
 				E3C165211A12AF1900B3A38F /* Products */,
 			);
@@ -81,6 +89,8 @@
 		E3C165221A12AF1900B3A38F /* WordCounter */ = {
 			isa = PBXGroup;
 			children = (
+				E3D740AB1A12DF7C0023CC23 /* FileParserObjC.h */,
+				E3D740AC1A12DF7C0023CC23 /* FileParserObjC.m */,
 				E3C165271A12AF1900B3A38F /* AppDelegate.h */,
 				E3C165281A12AF1900B3A38F /* AppDelegate.m */,
 				E3C1652A1A12AF1900B3A38F /* ViewController.h */,
@@ -105,7 +115,7 @@
 		E3C1653C1A12AF1900B3A38F /* WordCounterTests */ = {
 			isa = PBXGroup;
 			children = (
-				E3C1653F1A12AF1900B3A38F /* WordCounterTests.m */,
+				E3C1653F1A12AF1900B3A38F /* WordCounterTestsObjC.m */,
 				E3C1653D1A12AF1900B3A38F /* Supporting Files */,
 			);
 			path = WordCounterTests;
@@ -199,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D740AA1A12DF5B0023CC23 /* WordFiles in Resources */,
 				E3C1652F1A12AF1900B3A38F /* Main.storyboard in Resources */,
 				E3C165341A12AF1900B3A38F /* LaunchScreen.xib in Resources */,
 				E3C165311A12AF1900B3A38F /* Images.xcassets in Resources */,
@@ -221,6 +232,7 @@
 			files = (
 				E3C1652C1A12AF1900B3A38F /* ViewController.m in Sources */,
 				E3C165291A12AF1900B3A38F /* AppDelegate.m in Sources */,
+				E3D740AD1A12DF7C0023CC23 /* FileParserObjC.m in Sources */,
 				E3C165261A12AF1900B3A38F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,7 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3C165401A12AF1900B3A38F /* WordCounterTests.m in Sources */,
+				E3C165401A12AF1900B3A38F /* WordCounterTestsObjC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,9 +357,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = WordCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 			};
 			name = Debug;
 		};
@@ -355,9 +371,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = WordCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 			};
 			name = Release;
 		};
@@ -414,6 +433,7 @@
 				E3C165451A12AF1900B3A38F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3C165461A12AF1900B3A38F /* Build configuration list for PBXNativeTarget "WordCounterTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +442,7 @@
 				E3C165481A12AF1900B3A38F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
