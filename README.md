@@ -56,3 +56,8 @@ Step 2
 --------
 
 Use of SwiftCountedSet is eliminated.  While it's cool to be able to implement a Swift version of NSCountedSet using generics, NSCountedSet has a lot of optimizations in it that make it a better choice.
+
+Step 3
+--------
+
+Elimination of an expensive test using countElements.  As per the Swift Language Guide, using countElements can be expensive when dealing with a large string.  In this case, countElements is essentially used to analyze the grapheme clusters in 9MB of String data, which is rather expensive. Use of the Swift String isEmpty property is a much more efficient way of doing the needed test.  

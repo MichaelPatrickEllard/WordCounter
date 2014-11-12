@@ -121,7 +121,7 @@ public class FileParserSwift: NSObject {
         
         for (loopCounter, eachLine) in enumerate(strings) {
             
-            if (countElements(eachLine) > 19)
+            if (!eachLine.isEmpty)
             {
                 autoreleasepool
                 {
