@@ -8,6 +8,8 @@
 
 //  Limitations:  If we exceed the number of items in an integer, we're going to be sorry...
 
+import UIKit
+
 class SwiftCountedSet<T: Hashable> {
     
     private var dataDictionary = [T : Int]()
@@ -18,10 +20,14 @@ class SwiftCountedSet<T: Hashable> {
     
     func countForObject(object: T) -> Int {
         
-        let rawCount = dataDictionary[object]
+        var rawCount: Int?
+        
+        autoreleasepool {
+        
+            rawCount = self.dataDictionary[object]
+        }
         
         return rawCount == nil ? 0 : rawCount!
-        
     }
     
     func addObject(object : T) {
