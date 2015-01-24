@@ -22,6 +22,8 @@ class SwiftCountedSet<T: Hashable> {
         
         var rawCount: Int?
         
+        //  The autorelease pool reduces the peak memory usage, but the total memory allocated is still much greater with this approach. 
+        
         autoreleasepool {
         
             rawCount = self.dataDictionary[object]
