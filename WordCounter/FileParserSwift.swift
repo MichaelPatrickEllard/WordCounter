@@ -52,10 +52,7 @@ public class FileParserSwift: NSObject {
         
         for eachFileName in filesInSourceDirectory {
             
-            autoreleasepool
-            {
-                self.processFile(eachFileName)
-            }
+            self.processFile(eachFileName)
         }
         
         let doneCountedSetTime = NSDate()
@@ -118,26 +115,22 @@ public class FileParserSwift: NSObject {
             
             if !currentLine.isEmpty
             {
-                autoreleasepool
-                    {
-                        let currentLineObjC = currentLine as NSString
-                        
-                        var currentIndex = currentLineObjC.length - 1
-                        
-                        var space: unichar = 32
-                        
-                        while currentLineObjC.characterAtIndex(currentIndex) != space {
-                            
-                            currentIndex--
-                        }
-                        
-                        let dictionaryForm = currentLineObjC.substringFromIndex(currentIndex + 1)
-                        
-                        self.countedSet.addObject(dictionaryForm)
-                        
-                        lineCount = lineCount + 1
-                        
+                let currentLineObjC = currentLine as NSString
+                
+                var currentIndex = currentLineObjC.length - 1
+                
+                var space: unichar = 32
+                
+                while currentLineObjC.characterAtIndex(currentIndex) != space {
+                    
+                    currentIndex--
                 }
+                
+                let dictionaryForm = currentLineObjC.substringFromIndex(currentIndex + 1)
+                
+                self.countedSet.addObject(dictionaryForm)
+                
+                lineCount = lineCount + 1
             }
         }
         
